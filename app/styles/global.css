@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html.dark {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased text-gray-600 bg-white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+}
