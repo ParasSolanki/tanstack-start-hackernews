@@ -4,12 +4,19 @@ import {
   Outlet,
   ScrollRestoration,
 } from "@tanstack/react-router";
-import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 import { Body, Head, Html, Meta, Scripts } from "@tanstack/start";
 import { DefaultCatchBoundary } from "~/components/default-catch-boundary";
 import { NotFound } from "~/components/not-found";
 import globalCss from "~/styles/global.css?url";
 import * as React from "react";
+
+const TanStackRouterDevtools = import.meta.env.PROD
+  ? () => null // Render nothing in production
+  : React.lazy(() =>
+      import("@tanstack/router-devtools").then((res) => ({
+        default: res.TanStackRouterDevtools,
+      })),
+    );
 
 export const Route = createRootRoute({
   meta: () => [
