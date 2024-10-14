@@ -6,7 +6,7 @@ Uses [React](https://react.dev), [Tanstack Start](https://tanstack.com/start), [
 
 ## Demo
 
-![TanStack Start Heacker News](https://github.com/ParasSolanki/tanstack-start-hackernews/media/tanstack-start-hackernews-demo.webm)
+[tanstack-start-hackernews-demo.webm](https://github.com/user-attachments/assets/d0e01bdf-581f-4f1b-9748-6769ae60cfec)
 
 ## Installation
 
