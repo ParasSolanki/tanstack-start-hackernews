@@ -4,6 +4,10 @@ Demo app based on [Solid Hackernews](https://github.com/solidjs/solid-hackernews
 
 Uses [React](https://react.dev), [Tanstack Start](https://tanstack.com/start), [Tanstack Router](https://tanstack.com/router), [Vinxi](https://github.com/nksaraf/vinxi), [TailwindCSS](https://tailwindcss.com).
 
+## Demo
+
+![TanStack Start Heacker News](https://github.com/ParasSolanki/tanstack-start-hackernews/media/tanstack-start-hackernews-demo.webm)
+
 ## Installation
 
 Install Dependencies.
