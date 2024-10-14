@@ -32,23 +32,25 @@ function StoryDetailsPage() {
   const data = Route.useLoaderData();
 
   return (
-    <>
-      <div className="py-4">
-        <StoryCard story={data} />
-      </div>
-      {data.content && (
-        <div
-          className="text-sm space-y-2"
-          dangerouslySetInnerHTML={{ __html: data.content }}
-        ></div>
-      )}
+    data && (
+      <>
+        <div className="py-4">
+          <StoryCard story={data} />
+        </div>
+        {data.content && (
+          <div
+            className="text-sm space-y-2"
+            dangerouslySetInnerHTML={{ __html: data.content }}
+          ></div>
+        )}
 
-      <ul className="space-y-2">
-        {data.comments.map((c) => (
-          <Comment comment={c} />
-        ))}
-      </ul>
-    </>
+        <ul className="divide-y-2 divide-gray-600">
+          {data.comments.map((c) => (
+            <Comment comment={c} />
+          ))}
+        </ul>
+      </>
+    )
   );
 }
 
@@ -102,7 +104,7 @@ function Comment({
 
       {comment.content && (
         <div
-          className="space-y-2"
+          className="space-y-2 text-xs"
           dangerouslySetInnerHTML={{ __html: comment.content }}
         />
       )}
@@ -115,7 +117,7 @@ function Comment({
             </button>
             <div className="w-full h-0.5 bg-gray-600 ml-2" />
           </div>
-          <ul className="space-y-2">
+          <ul className="divide-y-2 divide-gray-600">
             {comment.comments.map((c) => (
               <Comment comment={c} parent={comment.id} />
             ))}
