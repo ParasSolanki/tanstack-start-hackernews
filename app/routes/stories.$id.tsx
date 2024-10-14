@@ -39,7 +39,7 @@ function StoryDetailsPage() {
         </div>
         {data.content && (
           <div
-            className="text-sm space-y-2"
+            className="space-y-2 text-sm"
             dangerouslySetInnerHTML={{ __html: data.content }}
           ></div>
         )}
@@ -68,10 +68,10 @@ function Comment({
     <li
       id={comment.id}
       style={{ "--level": `${comment.level * 6}px` } as React.CSSProperties}
-      className="pl-[--level] py-2 space-y-2 text-sm"
+      className="space-y-2 py-2 pl-[--level] text-sm"
       data-state={open ? "open" : "closed"}
     >
-      <div className="flex items-center text-xs space-x-1">
+      <div className="flex items-center space-x-1 text-xs">
         <Link
           to="/users/$id"
           params={{ id: comment.user }}
@@ -83,7 +83,7 @@ function Comment({
           to="/stories/$id"
           params={{ id: storyId.toString() }}
           title={new Date(comment.time * 1000).toLocaleString()}
-          className="hover:underline focus:underline underline-offset-2"
+          className="underline-offset-2 hover:underline focus:underline"
         >
           {comment.time_ago}
         </Link>
@@ -94,7 +94,7 @@ function Comment({
               to="/stories/$id"
               params={{ id: storyId.toString() }}
               hash={parent}
-              className="hover:underline focus:underline underline-offset-2"
+              className="underline-offset-2 hover:underline focus:underline"
             >
               parent
             </Link>
@@ -115,7 +115,7 @@ function Comment({
             <button type="button" onClick={() => setOpen(false)}>
               [-]
             </button>
-            <div className="w-full h-0.5 bg-gray-600 ml-2" />
+            <div className="ml-2 h-0.5 w-full bg-gray-600" />
           </div>
           <ul className="divide-y-2 divide-gray-600">
             {comment.comments.map((c) => (
@@ -128,7 +128,7 @@ function Comment({
       {!open && !!comment.comments.length && (
         <button
           type="button"
-          className="bg-yellow-100 w-full text-left"
+          className="w-full bg-yellow-100 text-left"
           onClick={() => setOpen(true)}
         >
           {`[+] ${comment.comments.length} ${comment.comments.length > 0 ? "replies" : "reply"} collapsed`}

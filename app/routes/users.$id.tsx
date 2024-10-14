@@ -48,7 +48,7 @@ function UserDetailsPage() {
           href={`https://news.ycombinator.com/submitted?id=${data.id}`}
           target="_blank"
           rel="noreferrer noopener"
-          className="underline underline-offset-2 pr-2"
+          className="pr-2 underline underline-offset-2"
         >
           submissions
         </a>
@@ -56,7 +56,7 @@ function UserDetailsPage() {
           href={`https://news.ycombinator.com/threads?id=${data.id}`}
           target="_blank"
           rel="noreferrer noopener"
-          className="underline underline-offset-2 px-2"
+          className="px-2 underline underline-offset-2"
         >
           comments
         </a>
@@ -64,7 +64,7 @@ function UserDetailsPage() {
           href={`https://news.ycombinator.com/favorites?id=${data.id}`}
           target="_blank"
           rel="noreferrer noopener"
-          className="underline underline-offset-2 pl-2"
+          className="pl-2 underline underline-offset-2"
         >
           favorites
         </a>

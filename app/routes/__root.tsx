@@ -1,15 +1,15 @@
 import {
+  createRootRoute,
   Link,
   Outlet,
   ScrollRestoration,
-  createRootRoute,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 import { Body, Head, Html, Meta, Scripts } from "@tanstack/start";
-import * as React from "react";
 import { DefaultCatchBoundary } from "~/components/default-catch-boundary";
 import { NotFound } from "~/components/not-found";
 import globalCss from "~/styles/global.css?url";
+import * as React from "react";
 
 export const Route = createRootRoute({
   meta: () => [
@@ -101,7 +101,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       </Head>
       <Body>
         <Header />
-        <main className="max-w-5xl mx-auto px-4 mt-4">{children}</main>
+        <main className="mx-auto mt-4 max-w-5xl px-4">{children}</main>
         <ScrollRestoration />
         <TanStackRouterDevtools position="bottom-right" />
         <Scripts />
@@ -112,40 +112,40 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 
 function Header() {
   return (
-    <header className="w-full bg-gradient-to-r from-cyan-500 to-cyan-600 h-16">
-      <nav className="flex max-w-5xl mx-auto items-center h-full justify-between p-4 font-bold text-base text-gray-800">
+    <header className="h-16 w-full bg-gradient-to-r from-cyan-500 to-cyan-600">
+      <nav className="mx-auto flex h-full max-w-5xl items-center justify-between p-4 text-base font-bold text-gray-800">
         <div className="flex space-x-6">
           <Link
             to="/"
-            className="hover:text-white focus:text-white transition-colors"
+            className="transition-colors hover:text-white focus:text-white"
             activeProps={{ className: "font-bold text-white" }}
           >
             HN
           </Link>
           <Link
             to="/new"
-            className="hover:text-white focus:text-white transition-colors"
+            className="transition-colors hover:text-white focus:text-white"
             activeProps={{ className: "font-bold text-white" }}
           >
             New
           </Link>
           <Link
             to="/show"
-            className="hover:text-white focus:text-white transition-colors"
+            className="transition-colors hover:text-white focus:text-white"
             activeProps={{ className: "font-bold text-white" }}
           >
             Show
           </Link>
           <Link
             to="/ask"
-            className="hover:text-white focus:text-white transition-colors"
+            className="transition-colors hover:text-white focus:text-white"
             activeProps={{ className: "font-bold text-white" }}
           >
             Ask
           </Link>
           <Link
             to="/jobs"
-            className="hover:text-white focus:text-white transition-colors"
+            className="transition-colors hover:text-white focus:text-white"
             activeProps={{ className: "font-bold text-white" }}
           >
             Jobs
@@ -155,7 +155,7 @@ function Header() {
         <a
           href="https://tanstack.com/start"
           target="_blank"
-          className="text-sm hover:underline focus:underline transition-all underline-offset-2"
+          className="text-sm underline-offset-2 transition-all hover:underline focus:underline"
           rel="noreferrer noopener"
         >
           Built with Tanstack Start

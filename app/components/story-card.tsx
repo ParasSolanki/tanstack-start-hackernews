@@ -9,7 +9,7 @@ export function StoryCard({ story }: { story: Story }) {
           <a
             href={story.url}
             rel="nofollow"
-            className="text-cyan-500 font-medium hover:underline underline-offset-2 focus:underline mr-1"
+            className="mr-1 font-medium text-cyan-500 underline-offset-2 hover:underline focus:underline"
           >
             {story.title}
           </a>
@@ -17,7 +17,7 @@ export function StoryCard({ story }: { story: Story }) {
           <Link
             to="/stories/$id"
             params={{ id: story.id.toString() }}
-            className="text-cyan-500 font-medium hover:underline underline-offset-2 focus:underline mr-1"
+            className="mr-1 font-medium text-cyan-500 underline-offset-2 hover:underline focus:underline"
           >
             {story.title}
           </Link>
@@ -40,7 +40,7 @@ export function StoryCard({ story }: { story: Story }) {
               to="/stories/$id"
               params={{ id: story.id.toString() }}
               title={new Date(story.time * 1000).toLocaleString()}
-              className="hover:underline focus:underline underline-offset-2"
+              className="underline-offset-2 hover:underline focus:underline"
             >
               {story.time_ago}
             </Link>{" "}

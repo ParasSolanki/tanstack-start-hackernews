@@ -1,6 +1,6 @@
-import { getJobStories } from "~/server/fn";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { StoryCard } from "~/components/story-card";
+import { getJobStories } from "~/server/fn";
 
 type JobsPageSearchParams = {
   page?: number;
@@ -42,7 +42,7 @@ function JobsPage() {
           <Link
             to="/"
             search={{ page: search.page - 1 }}
-            className="aria-disabled:text-gray-500 text-cyan-500"
+            className="text-cyan-500 aria-disabled:text-gray-500"
             aria-disabled={search.page === 1}
             disabled={search.page === 1}
           >
@@ -60,7 +60,7 @@ function JobsPage() {
           </Link>
         )}
       </div>
-      <ul className="divide-y divide-gray-400 ">
+      <ul className="divide-y divide-gray-400">
         {data.map((story) => (
           <li key={story.id} className="py-4">
             <StoryCard story={story} />

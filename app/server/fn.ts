@@ -61,7 +61,7 @@ export const getTopStories = createServerFn(
       throw new Error("Something went wrong while getting top stories");
 
     return (await response.json()) as unknown as Array<Story>;
-  }
+  },
 );
 
 export const getNewStories = createServerFn(
@@ -73,7 +73,7 @@ export const getNewStories = createServerFn(
       throw new Error("Something went wrong while getting new stories");
 
     return (await response.json()) as unknown as Array<Story>;
-  }
+  },
 );
 
 export const getShowStories = createServerFn(
@@ -85,7 +85,7 @@ export const getShowStories = createServerFn(
       throw new Error("Something went wrong while getting show stories");
 
     return (await response.json()) as unknown as Array<Story>;
-  }
+  },
 );
 
 export const getAskStories = createServerFn(
@@ -97,7 +97,7 @@ export const getAskStories = createServerFn(
       throw new Error("Something went wrong while getting ask stories");
 
     return (await response.json()) as unknown as Array<Story>;
-  }
+  },
 );
 
 export const getJobStories = createServerFn(
@@ -109,7 +109,7 @@ export const getJobStories = createServerFn(
       throw new Error("Something went wrong while getting job stories");
 
     return (await response.json()) as unknown as Array<JobStory>;
-  }
+  },
 );
 
 export const getStoryDetails = createServerFn(
@@ -127,7 +127,7 @@ export const getStoryDetails = createServerFn(
     }
 
     return json as unknown as StoryDetails;
-  }
+  },
 );
 
 export const getUserDetails = createServerFn(
@@ -145,5 +145,5 @@ export const getUserDetails = createServerFn(
     }
 
     return json as unknown as User;
-  }
+  },
 );
